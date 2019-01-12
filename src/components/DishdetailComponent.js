@@ -1,42 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Card, CardImg, CardText, CardBody,
+    CardTitle } from 'reactstrap';
 
-import { Card, CardImg, CardImgOverlay, CardText, CardBody,
-  CardTitle } from 'reactstrap';
 
-class DishDetail  extends Component {
-    constructor(props) {
-        super(props);
+    function RenderDish({dish}) {
+    
     }
 
-
-
-    renderDetail(){
-            return(
-                <div className="col-12 col-md-5 m-1">
-                    <Card key={this.props.dish.id}>
-                    <CardImg width="100%" src={this.props.dish.image} alt={this.props.dish.name} />
-                    <div>
-                        <h4>{this.props.dish.name}</h4>
-                    </div>
-                        <p>{this.props.dish.description}</p>
-                    </Card>
-                  </div>
-                )        
+    function RenderComments({comments}) {
+      
+      
     }
 
-
-
-    render(){
-        if(this.props.dish !== null){
-            return(this.renderDetail())
-        }else {
-            return(<div/>)
-        }
+    const  DishDetail = (props) => {
 
       
-      
-  }
-}
+    }
 
-
-export default DishDetail ;
+export default DishDetail;
